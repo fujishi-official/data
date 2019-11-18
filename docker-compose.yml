@@ -3,7 +3,7 @@ services:
   web:
     build: ./nginx
     ports:
-      - '8080:80'
+      - '8090:80'
     links:
       - php-fpm
     volumes:
@@ -23,7 +23,7 @@ services:
        MYSQL_PASSWORD: userpass
        MYSQL_DATABASE: sample
     ports:
-      - "3306:3306"
+      - "3300:3300"
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     environment:
